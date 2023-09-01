@@ -4,40 +4,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clima</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://kit.fontawesome.com/38a1461731.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Clima</h1>
+    <main>
+        <i class="fa-solid fa-moon"></i>
+        <div class="input_div">
+            <h1>Weather</h1>
+            <p>Vamos ver qual é o clima na sua cidade hoje?</p>
+                <form class="busca">
+                    <input type="search" id="searchInput" />
+                    <button id="submit_button">Search</button>
+                </form>
+            <div id="warning"></div>
+        </div>
 
-    <form class="busca">
-        <input type="search" id="searchInput" />
-        <button>Buscar</button>
-    </form>
-
-    <div class="resultado">
-        <div class="titulo">--</div>
-
-        <div class="info">
-            <div class="temp">
-                <div class="tempTitulo">Temperatura</div>
-                <div class="tempInfo">-- <sup>ºC</sup></div>
-                <img src="http://openweathermap.org/img/wn/10d@2x.png" />
-            </div>
-            <div class="vento">
-                <div class="ventoTitulo">Vento</div>
-                <div class="ventoInfo">-- <span>km/h</span></div>
-                <div class="ventoArea">
-                    <div class="ventoPonto" style="transform: rotate(0deg)"></div>
-                </div>
+        <div class="weather">
+            <i class="fa-solid fa-arrow-left"></i>
+            <div class="main_result">
+                    <div class="location_date">
+                        <div class="location">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div class="titulo">--</div>
+                        </div>
+                        <div class="date">Sunday, 29 march</div>
+                        <img src='https://openweathermap.org/img/wn/02n@2x.png' alt="weather icon"/>
+                    </div>
+                    <div class="temp_and_icon">
+                        <div id="temp"></div>
+                    </div>
+                    <div class="weather_info">
+                        <div id="weather_status"></div>
+                        <div class="weather_more_info">
+                            <div class="information">
+                                <i class="info-icon fa-solid fa-temperature-three-quarters"></i>
+                                <div class="info_div">
+                                    <div class="info_title">Min-Max</div>
+                                    <div class="info" id="temp_max_min"></div>
+                                </div>
+                            </div>
+                            <div class="information">
+                                <i class="info-icon fa-solid fa-wind"></i>
+                                <div class="info_div">
+                                    <div class="info_title">Wind</div>
+                                    <div class="info" id="wind"></div>
+                                </div>
+                            </div>
+                            <div class="information">
+                                <i class="info-icon fa-solid fa-droplet"></i>
+                                <div class="info_div">
+                                    <div class="info_title">Humidity</div>
+                                    <div class="info" id="humidity"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
-    </div>
 
-    <div class="aviso"></div>
+        <div class="aviso"></div>
+    </main>
 
-    <footer>Criado pela B7Web</footer>
-
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
+
